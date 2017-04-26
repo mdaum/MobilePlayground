@@ -1,6 +1,8 @@
 package RandomSongList;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class SongInfo {
 	String name;
@@ -13,7 +15,8 @@ public class SongInfo {
 	String id;
 	long popularity;
 	String preview_url;
-	public SongInfo(String n,String al, ArrayList<SpotifyImage>aa,ArrayList<ArtistInfo>ars,long d, boolean e, String trackurl, String id, long pop, String prev){
+	Set<String>genres;
+	public SongInfo(String n,String al, ArrayList<SpotifyImage>aa,ArrayList<ArtistInfo>ars,long d, boolean e, String trackurl, String id, long pop, String prev,Set<String>g){
 		this.name=n;
 		this.album=al;
 		this.albumArt=aa;
@@ -24,6 +27,7 @@ public class SongInfo {
 		this.id=id;
 		this.popularity=pop;
 		this.preview_url=prev;
+		this.genres=g;
 	}
 	@Override
 	public String toString(){
