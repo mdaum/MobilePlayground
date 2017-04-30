@@ -20,14 +20,14 @@ public class RandomSongListGenerator {
 	
 	public static void main(String[]args) throws MalformedURLException, IOException, ParseException{
 		ArrayList<SongInfo> list = RandSongList();
-		for (SongInfo s : list) {
+/*		for (SongInfo s : list) {
 			System.out.println(s);
 			String toLog=s.genres.size()+" genres: ";//build out string to Log in while loop
             for(String str: s.genres){//append to toLog
                 toLog+=str+", ";
             }
             System.out.println(toLog);
-		}
+		}*/
 		System.out.println(list.size());
 	}
     public static ArrayList<SongInfo> RandSongList() throws MalformedURLException, IOException, ParseException {
@@ -100,7 +100,7 @@ public class RandomSongListGenerator {
 	                artists.add(new ArtistInfo(n, url, a_id));
 	
 	                //now ping api page for artist so we can get the genres
-	                HttpURLConnection pingArtist = (HttpURLConnection) ((new URL((String)artist.get("href")).openConnection()));
+	/*                HttpURLConnection pingArtist = (HttpURLConnection) ((new URL((String)artist.get("href")).openConnection()));
 	                pingArtist.setRequestProperty("Content-Type", "application/json");
 	                pingArtist.setRequestProperty("Accept", "application/json");
 	                pingArtist.setRequestMethod("GET");
@@ -114,7 +114,7 @@ public class RandomSongListGenerator {
 	                for (Object genre_obj:genre_array) {
 	                     String genre=(String)genre_obj;//cast
 	                     genres.add(genre);//add to HashSet
-	                }
+	                }*/
 	            }
 	
 	            //load object into ArrayList
